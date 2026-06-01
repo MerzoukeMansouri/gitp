@@ -65,7 +65,7 @@ mod tests {
                 workdir: dir,
             }],
             "echo".into(),
-            vec!["hello_gitp".into()],
+            vec!["hello_pgit".into()],
         );
         let mut results = vec![];
         while let Some(msg) = rx.recv().await {
@@ -74,7 +74,7 @@ mod tests {
         assert_eq!(results.len(), 1);
         let (label, lines) = &results[0];
         assert_eq!(label, "t");
-        assert!(lines.iter().any(|l| l.contains("hello_gitp")));
+        assert!(lines.iter().any(|l| l.contains("hello_pgit")));
     }
 
     #[tokio::test]
@@ -107,7 +107,7 @@ mod tests {
                 label: "err".into(),
                 workdir: dir,
             }],
-            "this_cmd_does_not_exist_gitp".into(),
+            "this_cmd_does_not_exist_pgit".into(),
             vec![],
         );
         let (_, lines) = rx.recv().await.unwrap();

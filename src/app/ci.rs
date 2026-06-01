@@ -171,7 +171,7 @@ mod tests {
 
     #[test]
     fn workflow_files_filters_correctly() {
-        let base = std::env::temp_dir().join(format!("gitp_wf_{}", std::process::id()));
+        let base = std::env::temp_dir().join(format!("pgit_wf_{}", std::process::id()));
         let wf_dir = base.join(".github/workflows");
         fs::create_dir_all(&wf_dir).unwrap();
         fs::write(wf_dir.join("ci.yml"), "").unwrap();
@@ -185,7 +185,7 @@ mod tests {
 
     #[test]
     fn workflow_files_missing_dir_returns_empty() {
-        let base = std::env::temp_dir().join("gitp_wf_noexist_99999");
+        let base = std::env::temp_dir().join("pgit_wf_noexist_99999");
         assert!(workflow_files(&base).is_empty());
     }
 }

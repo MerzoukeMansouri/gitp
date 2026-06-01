@@ -21,7 +21,7 @@ impl App {
                 workdir: r.path.clone(),
             }]
         } else {
-            self.repo_output = vec![("gitp".to_string(), vec!["⚠ No repositories available".to_string()])];
+            self.repo_output = vec![("pgit".to_string(), vec!["⚠ No repositories available".to_string()])];
             return;
         };
         self.run_on(targets, program, args);
@@ -77,7 +77,7 @@ impl App {
             .collect();
         if targets.is_empty() {
             self.repo_output = vec![(
-                "gitp".to_string(),
+                "pgit".to_string(),
                 vec!["✓ Nothing to discard — all repos clean.".to_string()],
             )];
             self.status_line = "Nothing to discard.".to_string();

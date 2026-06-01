@@ -99,7 +99,7 @@ mod tests {
 
     #[test]
     fn find_repos_discovers_git_dirs() {
-        let base = std::env::temp_dir().join(format!("gitp_findrepos_{}", std::process::id()));
+        let base = std::env::temp_dir().join(format!("pgit_findrepos_{}", std::process::id()));
         let _ = fs::remove_dir_all(&base);
         fs::create_dir_all(base.join("alpha/.git")).unwrap();
         fs::create_dir_all(base.join("beta/.git")).unwrap();
@@ -115,7 +115,7 @@ mod tests {
 
     #[test]
     fn find_repos_empty_dir() {
-        let base = std::env::temp_dir().join(format!("gitp_empty_{}", std::process::id()));
+        let base = std::env::temp_dir().join(format!("pgit_empty_{}", std::process::id()));
         let _ = fs::remove_dir_all(&base);
         fs::create_dir_all(&base).unwrap();
 

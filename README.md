@@ -1,8 +1,8 @@
-# gitp
+# pgit
 
 K9s-style TUI for managing git operations across multiple repositories.
 
-![Release](https://img.shields.io/github/v/release/MerzoukeMansouri/gitp)
+![Release](https://img.shields.io/github/v/release/MerzoukeMansouri/pgit)
 ![Rust](https://img.shields.io/badge/rust-stable-orange?logo=rust&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -19,22 +19,22 @@ K9s-style TUI for managing git operations across multiple repositories.
 ### Homebrew
 
 ```bash
-brew tap MerzoukeMansouri/gitp
-brew install MerzoukeMansouri/gitp/gitp
+brew tap MerzoukeMansouri/pgit
+brew install MerzoukeMansouri/pgit/pgit
 ```
 
 ### Update
 
 ```bash
 brew update
-brew upgrade MerzoukeMansouri/gitp/gitp
+brew upgrade MerzoukeMansouri/pgit/pgit
 ```
 
 ### From source
 
 ```bash
 cargo build --release
-ln -sf $(pwd)/target/release/gitp ~/.local/bin/gitp
+ln -sf $(pwd)/target/release/pgit ~/.local/bin/pgit
 ```
 
 Add to `PATH` if needed:
@@ -48,8 +48,8 @@ export PATH="$HOME/.local/bin:$PATH"
 Run from any directory containing git repositories:
 
 ```bash
-gitp
-gitp ~/Projects       # specify a root directory
+pgit
+pgit ~/Projects       # specify a root directory
 ```
 
 ## Keybindings
